@@ -3,77 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Monopoly</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="monopoly.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-    <div class="Window">
-        <div class="Gameboard">
-            <table id="Gameboard">
+    <div class="window">
+        <div class="gameBoard">
+            <table id="gameBoard">
                 <tr>
-                    <td class="field_board_corner" id="field_20"></td>
-                    <td class="field_board_top" id="field_21"></td>
-                    <td class="field_board_top" id="field_22"></td>
-                    <td class="field_board_top" id="field_23"></td>
-                    <td class="field_board_top" id="field_24"></td>
-                    <td class="field_board_top" id="field_25"></td>
-                    <td class="field_board_top" id="field_26"></td>
-                    <td class="field_board_top" id="field_27"></td>
-                    <td class="field_board_top" id="field_28"></td>
-                    <td class="field_board_top" id="field_29"></td>
-                    <td class="field_board_corner" id="field_30"></td>
+                    <td class="field board_corner" id="field 20"></td>
+                    <td class="field board_top" id="field21"></td>
+                    <td class="field board_top" id="field22"></td>
+                    <td class="field board_top" id="field23"></td>
+                    <td class="field board_top" id="field24"></td>
+                    <td class="field board_top" id="field25"></td>
+                    <td class="field board_top" id="field26"></td>
+                    <td class="field board_top" id="field27"></td>
+                    <td class="field board_top" id="field28"></td>
+                    <td class="field board_top" id="field29"></td>
+                    <td class="field board_corner" id="field30"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_19"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_31"></td>
+                    <td class="field board_left" id="field19"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field31"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_18"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_32"></td>
+                    <td class="field board_left" id="field18"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field32"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_17"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_33"></td>
+                    <td class="field board_left" id="field17"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field33"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_16"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_34"></td>
+                    <td class="field board_left" id="field16"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field34"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_15"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_35"></td>
+                    <td class="field board_left" id="field15"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field35"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_14"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_36"></td>
+                    <td class="field board_left" id="field14"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field36"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_13"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_37"></td>
+                    <td class="field board_left" id="field13"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field37"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_12"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_38"></td>
+                    <td class="field board_left" id="field12"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field38"></td>
                 </tr><tr>
-                    <td class="field_board_left" id="field_11"></td>
-                    <td class="field_board_center" colspan="9"></td>
-                    <td class="field_board_right" id="field_39"></td>
+                    <td class="field board_left" id="field11"></td>
+                    <td class="field board_center" colspan="9"></td>
+                    <td class="field board_right" id="field39"></td>
                 </tr><tr>
-                    <td class="field_board_corner" id="field_10"></td>
-                    <td class="field_board_bottom" id="field_9"></td>
-                    <td class="field_board_bottom" id="field_8"></td>
-                    <td class="field_board_bottom" id="field_7"></td>
-                    <td class="field_board_bottom" id="field_6"></td>
-                    <td class="field_board_bottom" id="field_5"></td>
-                    <td class="field_board_bottom" id="field_4"></td>
-                    <td class="field_board_bottom" id="field_3"></td>
-                    <td class="field_board_bottom" id="field_2"></td>
-                    <td class="field_board_bottom" id="field_1"></td>
-                    <td class="field_board_corner" id="field_0"></td>
+                    <td class="field board_corner" id="field10"></td>
+                    <td class="field board_bottom" id="field9"></td>
+                    <td class="field board_bottom" id="field8"></td>
+                    <td class="field board_bottom" id="field7"></td>
+                    <td class="field board_bottom" id="field6"></td>
+                    <td class="field board_bottom" id="field5"></td>
+                    <td class="field board_bottom" id="field4"></td>
+                    <td class="field board_bottom" id="field3"></td>
+                    <td class="field board_bottom" id="field2"></td>
+                    <td class="field board_bottom" id="field1"></td>
+                    <td class="field board_corner" id="field0" ></td>
                 </tr>
             </table>
         </div>
     </div>
-
 </body>
 </html>
