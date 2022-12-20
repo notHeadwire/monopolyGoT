@@ -52,9 +52,9 @@ square[37] = new Square("Park Place", "$350", "#0000FF", 350, 10, 35);
 square[38] = new Square("LUXURY TAX", "Pay $100", "#FFFFFF");
 square[39] = new Square("Boardwalk", "$400", "#0000FF", 400, 10, 50);
 
-for (let i = 0; i < square.length; i++) {
-    let field = document.getElementById("field" + i);
-    field.setAttribute("content", square[i].name);
-    field.setAttribute("background-color", square[i].color);
+//todo INITIATOR
 
+for (let i = 0; i < square.length; i++) {
+    document.getElementById("field" + i).innerHTML = square[i].name;
+    document.querySelector("field" + i).style.backgroundColor = square[i].color;
 }
