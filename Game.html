@@ -5,11 +5,12 @@
     <title>Monopoly GoT</title>
     <link rel="stylesheet" href="./style.css">
     <script src="/Assets/Dice/dice.js"></script>
+    <script src="Assets/Money/money.js"></script>
 
 </head>
 <body>
-
-<div class="board">
+<div class="table">
+    <div class="board">
     <div class="col left">
         <div class="corner"></div>
         <div class="space">
@@ -158,15 +159,17 @@
                 <div class="counter counterprice">PRICE $400</div>
                 <div id="chance"></div><div id="chancetext">CHANCE</div>
                 <div id="middleText"></div>
+                <div id="moneyDisplay"><script> document.write('Player 1: ' + moneyDisplay)</script></div>
             </div>
         </div>
         <div class="corner"></div>
     </div>
+    </div>
+    <div class="diceButton">
+        <button onclick="rollDice()" id="diceButton"> Roll the dice </button>
+    </div>
 </div>
 
-<div class="top right">
-    <button onclick="rollDice()" id="diceButton"> Roll the dice </button>
-</div>
 
 
 </body>
