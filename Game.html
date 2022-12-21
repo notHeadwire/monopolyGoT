@@ -2,8 +2,9 @@
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
-    <title>CodePen - CSS Monopoly</title>
+    <title>Monopoly GoT</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="/Assets/Dice/dice.js"></script>
 
 </head>
 <body>
@@ -156,11 +157,17 @@
                 <div class="title2 counter" id="boardwalk">BOARDWALK</div>
                 <div class="counter counterprice">PRICE $400</div>
                 <div id="chance"></div><div id="chancetext">CHANCE</div>
-                <div id="titletext">MONOPOLY</div></div></div>
+                <div id="middleText"></div>
+            </div>
+        </div>
         <div class="corner"></div>
     </div>
 </div>
-<!-- partial -->
+
+<div class="top right">
+    <button onclick="rollDice()" id="diceButton"> Roll the dice </button>
+</div>
+
 
 </body>
 </html>
