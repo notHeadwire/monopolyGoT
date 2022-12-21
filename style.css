@@ -1,81 +1,232 @@
-/* Selector -> . = Klasse | # = id */
-
-/* Spielfeld */
-.gameBoard {
-    /* display: none; */
-    border: 2px solid black;
-    border-spacing: 3px;
-    margin: 25px;
-    float: left;
+body {
+    background-color: black;
+    font-family: 'Josefin Sans';
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
 }
 
-.board_center {
-    width: 675px;
-    border: none;
-    vertical-align: bottom;
-    background-repeat: no-repeat;
-    background-size: auto 40px;
+div {
+    background-color: #e5f9e0;
+    color: black;
+    margin:0;
+    padding:0;
 }
 
-.field{
+.board {
+    background-color: lightblue;
+    width: 1300px;
+    height: 1300px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+.space {
+    height: 98px;
+    width: 198px;
+    border: 1px solid black;
+    background-color: #e5f9e0;
+}
+.corner {
+    height: 198px;
+    width: 198px;
+    border: 1px solid black;
+    background-color: #e5f9e0;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+.fix {
+    display: flex;
+    flex-direction: column;
+}
+.bottom {
+
+}
+.space2 {
     position: relative;
-    top: 0;
-    left: 0;
-    padding: 0;
-    vertical-align: bottom;
-    background-repeat: no-repeat;
-    background-size: auto 40px;
-
+    width:98px;
+    height: 198px;
+    border: 1px solid black;
+    background-color: #e5f9e0;
+}
+.bottom {
+    margin-top: auto;
 }
 
-.fieldColor {
-    background: red;
+.left .space .color {
+    width: 25%;
+    height: 100%;
+    margin-left: auto;
+    border-left: 1px solid black;
+}
+.right .space .color {
+    width: 25%;
+    height: 100%;
+    margin-right: auto;
+    border-right: 1px solid black;
+}
+.top .space2 .color {
     width: 100%;
-    height: 40px;
-    }
+    height: 25%;
+    margin-top: 147px;
+    border-top: 1px solid black;
+}
+.bottom .space2 .color {
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid black;
+}
+.group1 {background-color: #722e81;}
+.group2 {background-color: #c7daf3;}
+.group3 {background-color: #c10a80;position:relative;}
+.group4 {background-color: #fabd2a;position:relative;}
+.group5 {background-color: #fc3b22;position:relative;}
+.group6 {background-color: #f8fd0f;position:relative;}
+.group7 {background-color: #43c42c;position:relative;}
+.group8 {background-color: #677db8;position:relative;}
 
-.fieldName {
-    font-weight: bold;
-    font-size: 20px;
-    background-color: white;
-    height: 45px;
+.title {
+    padding: 16PX 5PX;
+}
+.title2 {
+    text-align: center;
+}
+.price {
+    font-size: 0.85em;
+    margin-top: 45px;
+}
+.price2 {
+    font-size: 0.85em;
+    margin-top: 61px;
+}
+.counter {
+    width: 0px;
+    left: 80px;
+    top: 60px;
+    position: absolute;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.counterprice {
+    font-size: 0.85em;
+    left: 140px;
+    top: 40px;
+    width: 85px;
+}
+.clock {
+    width: 0px;
+    right: 80px;
+    top: -5px;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+.clockfix {top:5px;}
+.clockprice {
+    font-size: 0.85em;
+    left: -176px;
+    top: 40px;
+    width: 85px;
+}
+.upside {
+    width:0;
+    top: 99px;
+    left: 84px;
+    font-size:14px;
+    position: absolute;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+.upsideprice {
+    font-size: 0.85em;
+    left: 10px;
+    top: 10px;
+    width: 85px;
+}
+#park {
+    top: 50px;
+}
+#boardwalk {
+    top:84px;
 }
 
-.fieldPrice {
-    background-color: white;
-    vertical-align: bottom;
-    height: 25px;
+#chance {
+    border: 1px dashed black;
+    width:250px;
+    height:150px;
+    top: -180px;
+    left: -350px;
+    font-size:14px;
+    position: absolute;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
 }
-
-
-.board_corner {
-    width: 102px;
-    height: 102px;
-    border: 1px solid black;
+#community {
+    border: 1px dashed black;
+    width:250px;
+    height:150px;
+    top: 150px;
+    left: 150px;
+    font-size:14px;
+    position: absolute;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
 }
-
-.board_top {
-    width: 72px;
-    height: 102px;
-    border: 1px solid black;
+#communitytext {
+    width:150px;
+    height:15px;
+    top: 280px;
+    left: 270px;
+    font-size:14px;
+    position: absolute;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
 }
-
-.board_bottom {
-    width: 72px;
-    height: 102px;
-    border: 1px solid black;
-
+#chancetext {
+    width:100px;
+    height:20px;
+    top: -172px;
+    left: -345px;
+    font-size:14px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
 }
-
-.board_left {
-    width: 102px;
-    height: 72px;
-    border: 1px solid black;
-    content: "left";
-}
-
-.board_right {
-    width: 102px;
-    height: 72px;
-    border: 1px solid black;
+#titletext {
+    width:200px;
+    height:100px;
+    font-size: 25px;
+    top: -302px;
+    left: -705px;
+    font-size:104px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
 }
