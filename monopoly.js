@@ -1,3 +1,5 @@
+
+    
 function Square(name, priceText, color, price, groupNumber, baseRent) {
     this.name = name;
     this.pricetext = priceText;
