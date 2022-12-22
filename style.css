@@ -49,8 +49,6 @@ div {
     left: 57px;
     background-color:  orange;
     z-index: 2;
-    font-family: monopoly;
-
 
 }
 
@@ -266,24 +264,15 @@ div {
     font-size:25px;
     position: absolute;
 }
-
-//Icons
-
-.icon::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-
+/* FÜR ICONS */
 .prison{
     transform: rotate(45deg);
     position: relative;
 }
 
-.jailFace::before {
-    font-family: monopoly;
-    content: "\f119";
-    font-size: 90px;
+.parking{
+    transform: rotate(135deg);
+    position: relative;
+    top: 80px;
 }
+
