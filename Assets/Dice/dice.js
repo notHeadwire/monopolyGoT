@@ -1,13 +1,28 @@
-//Funktion Würfel rollen
+var elDiceOne       = document.getElementById('dice1');
+var elDiceTwo       = document.getElementById('dice2');
+var elComeOut       = document.getElementById('roll');
+
+elComeOut.onclick   = function () {rollDice();};
 
 function rollDice() {
-    let rolledEyes;
-    let dice1;
-    let dice2;
-//------------------------------------------(max - min +1) + min 
-    dice1 = (Math.floor(Math.random() * (6 - 1 + 1) + 1));
-    dice2 = (Math.floor(Math.random() * (6 - 1 + 1) + 1));
-    rolledEyes= dice1 + dice2;
-    document.querySelector('#middleText').innerHTML = dice1 + ' + ' + dice2 + ' = ' + rolledEyes;
-}
 
+    var diceOne   = Math.floor((Math.random() * 6) + 1);
+    var diceTwo   = Math.floor((Math.random() * 6) + 1);
+
+    console.log(diceOne + ' ' + diceTwo);
+
+    for (var i = 1; i <= 6; i++) {
+        elDiceOne.classList.remove('show-' + i);
+        if (diceOne === i) {
+            elDiceOne.classList.add('show-' + i);
+        }
+    }
+
+    for (var k = 1; k <= 6; k++) {
+        elDiceTwo.classList.remove('show-' + k);
+        if (diceTwo === k) {
+            elDiceTwo.classList.add('show-' + k);
+        }
+    }
+    setTimeout(rollDice(), 1000);
+}
