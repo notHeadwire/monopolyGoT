@@ -41,19 +41,6 @@ div {
     background-color: #2E3F4B;
     z-index: 1;
 }
-.smallCorner {
-    height: 140px;
-    width: 140px;
-    border: 1px solid white;
-    position: relative;
-    left: 57px;
-    background-color:  orange;
-    z-index: 2;
-
-}
-
-
-
 
 .cornerContainer {
     position: relative;
@@ -266,13 +253,36 @@ div {
 }
 /* FÜR ICONS */
 .prison{
+    font-size: 20px;
     transform: rotate(45deg);
     position: relative;
 }
 
 .parking{
+    font-size: 25px;
     transform: rotate(135deg);
     position: relative;
-    top: 80px;
+    top: 40px;
 }
 
+.goJail{
+    font-size: 20px;
+    top: 45px;
+    left: -10px;
+    transform: rotate(-135deg);
+    position: relative;
+}
+
+.smallCorner {
+    height: 140px;
+    width: 140px;
+    border: 1px solid white;
+    position: relative;
+    left: 57px;
+    background-color:  orange;
+    z-index: 2;
+}
+
+.textSize{
+    font-size: 20px;
+}
