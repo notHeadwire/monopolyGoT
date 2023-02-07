@@ -286,3 +286,12 @@ div {
 .textSize{
     font-size: 20px;
 }
+
+.player1{
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+}
