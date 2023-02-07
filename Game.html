@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monopoly GoT</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="/Assets/Dice/dice.js"></script>
+    <script src="Assets/Money/money.js"></script>
+
+</head>
+<body>
+<div class="table">
+    <div class="board">
+    <div class="col left">
+        <div class="corner" id="20">
+            <div class="parking">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366.68 366.68" style="enable-background:new 0 0 512 512" xml:space="preserve" width="80" height="80">
+                    <path style="fill:#6bbae2" d="M294.222 366.68H72.457C32.503 366.68 0 334.172 0 294.222V72.457C0 32.507 32.503 0 72.457 0h221.764c39.951 0 72.459 32.507 72.459 72.457v221.764c0 39.951-32.508 72.459-72.458 72.459z"/>
+                    <path style="fill:#60aed5" d="M294.222 0H183.34v366.68h110.882c39.95 0 72.458-32.508 72.458-72.458V72.457C366.68 32.507 334.172 0 294.222 0z"/>
+                    <path style="fill:#dbe9fd" d="M227.022 47.828H115.744c-3.427 0-6.935.319-10.283.877-5.66 1.036-9.804 5.978-9.804 11.798v246.393a11.94 11.94 0 0 0 11.957 11.957h23.914a11.94 11.94 0 0 0 11.957-11.957v-83.699h83.539c37.465 0 67.915-30.45 67.915-67.915v-39.537c-.001-37.467-30.451-67.917-67.917-67.917z"/>
+                    <path style="fill:#6bbae2" d="M227.022 95.656H155.44c-3.189 0-6.218 1.196-8.449 3.507a11.944 11.944 0 0 0-3.507 8.449v55.799a11.94 11.94 0 0 0 11.957 11.957h71.582c11.08 0 20.088-9.007 20.088-20.088v-39.537c-.001-11.079-9.009-20.087-20.089-20.087z"/>
+                    <path style="fill:#c5dcfd" d="M294.938 115.744v39.537c0 37.465-30.45 67.915-67.915 67.915H183.34V47.828h43.682c37.466 0 67.916 30.45 67.916 67.916z"/>
+                    <path style="fill:#60aed5" d="M247.11 115.744v39.537c0 11.08-9.007 20.088-20.088 20.088H183.34V95.656h43.682c11.08 0 20.088 9.008 20.088 20.088z"/>
+                </svg>
+                <br><i> Free Parking</i>
+            </div>
+        </div>
+        <div class="space" id="19">
+            <div class="color group4">
+                <div class="title2 rotationLeft">NEW YORK AVENUE</div>
+                <div class="rotationLeft rotationLeftPrice">PRICE $200</div>
+                <div id="community"></div>
+                <div id="communitytext">COMMUNITY CHEST</DIV>
+            </div>
+        </div>
+        <div class="space" id="18">
+            <div class="color group4">
+                <div class="title2 rotationLeft">TENNES-SEE AVENUE</div>
+                <div class="rotationLeft rotationLeftPrice">PRICE $180</div>
+            </div>
+        </div>
+        <div class="space" id="17"> Community </div>
+        <div class="space" id="16">
+            <div class="color group4">
+                <div class="title2 rotationLeft">ST. JAMES PLACE</div>
+                <div class="rotationLeft rotationLeftPrice">PRICE $180</div>
+            </div>
+        </div>
+        <div class="space" id="15"> West </div>
+        <div class="space" id="14">
+            <div class="color group3">
+                <div class="title2 rotationLeft rotationLeftFix">VIRGINIA AVENUE</div>
+                <div class="rotationLeft rotationLeftPrice">PRICE $160</div>
+            </div>
+        </div>
+        <div class="space" id="13">
+            <div class="color group3">
+                <div class="title2 rotationLeft rotationLeftFix"></div>
+                <div class="rotationLeft rotationLeftPrice">PRICE $160</div>
+            </div>
+        </div>
+        <div class="space" id="12"> Electricity </div>
+        <div class="space" id="11">
+            <div class="color group3">
+                <div class="title2 rotationLeft"></div>
+                <div class="rotationLeft rotationLeftPrice">PRICE $140</div>
+            </div>
+        </div>
+        <div class="corner" id="10">
+            <div class="smallCorner" id="40">
+                <div class="prison">
+                    <i> In </i> <br>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="60%" viewBox="0 0 16.8 16.8">
+                            <path d="M0 0v16.8h16.8V0H0zm1.2 1.2h3.6v14.4h-.6v-5.062c-.36.424-.6.937-.6 1.462v3.6H1.2V1.2zm4.8 0h4.8v14.4h-.6v-6H6.6v6H6V1.2zm6 0h3.6v14.4h-2.4V12c0-.525-.24-1.038-.6-1.462V15.6H12V1.2zM8.4 3.6c-.72 0-1.359.321-1.8.825v3.149c.441.504 1.08.825 1.8.825s1.359-.321 1.8-.825V4.425A2.382 2.382 0 0 0 8.4 3.6z" style="fill:#000;fill-opacity:1;stroke:none"/>
+                        </svg>
+                    </div>
+                    <i> Prison </i>
+                </div>
+            </div>
+            <i class="textSize"> Just Visit </i>
+        </div>
+    </div>
+    <div class="fix">
+        <div class="row top">
+            <div class="space2" id="21">
+                <div class="title2 upside">KENTUCKY AVENUE</div>
+                <div class="upside upsideprice">PRICE $220</div>
+                <div class="color group5"></div>
+            </div>
+            <div class="space2" id="22"> Chance </div>
+            <div class="space2" id="23">
+                <div class="title2 upside">INDIANA AVENUE</div>
+                <div class="upside upsideprice">PRICE $220</div>
+                <div class="color group5"></div></div>
+            <div class="space2" id="24">
+                <div class="title2 upside">ILLINOIS AVENUE</div>
+                <div class="upside upsideprice">PRICE $240</div>
+                <div class="color group5"></div>
+            </div>
+            <div class="space2" id="25"> North </div>
+            <div class="space2" id="26">
+                <div class="title2 upside">ATLANTIC AVENUE</div>
+                <div class="upside upsideprice">PRICE $260</div>
+                <div class="color group6"></div>
+            </div>
+            <div class="space2" id="27">
+                <div class="title2 upside">VENTNOR AVENUE</div>
+                <div class="upside upsideprice">PRICE $260</div>
+                <div class="color group6"></div>
+            </div>
+            <div class="space2" id="28"> Water </div>
+            <div class="space2" id="29">
+                <div class="title2 upside">MARVIN GARDENS</div>
+                <div class="upside upsideprice">PRICE $280</div>
+                <div class="color group6"></div>
+            </div>
+        </div>
+        <div class="row bottom">
+            <div class="space2" id="9">
+                <div class="color group2"></div>
+                <div class="title">CONNEC-TICUT AVENUE</div>
+                <div class="price">PRICE $120</div>
+            </div>
+            <div class="space2" id="8">
+                <div class="color group2"></div>
+                <div class="title">VERMONT AVENUE</div>
+                <div class="price2">PRICE $100</div>
+            </div>
+            <div class="space2" id="7"> Chance </div>
+            <div class="space2" id="6">
+                <div class="color group2"></div>
+                <div class="title">ORIENTAL AVENUE</div>
+                <div class="price2">PRICE $100</div>
+            </div>
+            <div class="space2" id="5"> South </div>
+            <div class="space2" id="4"> Income Tax </div>
+            <div class="space2" id="3">
+                <div class="color group1"></div>
+                <div class="title">BALTIC AVENUE</div>
+                <div class="price2">PRICE $60</div>
+            </div>
+            <div class="space2" id="2"> Community </div>
+            <div class="space2" id="1">
+                <div class="color group1"></div>
+                <div class="title">MEDITER-RANEAN AVENUE</div>
+                <div class="price">PRICE $60</div>
+            </div>
+        </div>
+    </div>
+    <div class="col right">
+        <div class="corner" id="30">
+            <div class="goJail">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.875 46.875" style="enable-background:new 0 0 512 512" xml:space="preserve" width="120" height="120"><path style="fill:gray" d="M5.857 32.856H7.41v10.883H5.857z"/><path style="fill:#4a6f93" d="m11.589 19.062-1.974-4.756 4.191-10.14L23.84 0l10.14 4.191 4.165 10.034-1.994 4.821m-.995 19.418v8.411H12.6v-8.409a6.401 6.401 0 0 1 5.239-6.294A6.411 6.411 0 0 1 19 32.067h9.759a6.401 6.401 0 0 1 6.399 6.399z"/><path style="fill:#3d5f7a" d="M23.103 36.063h1.552v10.812h-1.552z"/><path style="fill:#3d5f7a" d="m29.919 32.17-1.434 7.941-4.605-2.754-4.605 2.754-1.435-7.941a6.411 6.411 0 0 1 1.161-.105h9.759c.396 0 .783.036 1.159.105z"/><path style="fill:#3d5f7a" d="M22.942 32.066a6.399 6.399 0 0 0-6.399 6.401v8.411H12.6v-8.412a6.399 6.399 0 0 1 6.401-6.401h3.942z"/><path style="fill:#e0b394" d="M28.445 22.54v9.514a4.566 4.566 0 0 1-9.132 0V21.297"/><path style="fill:#f9c573" d="M22.619 41.236a.724.724 0 0 1-.724.724.724.724 0 0 1-.724-.724.724.724 0 0 1 1.449 0zm0 3.002a.724.724 0 0 1-.724.724.724.724 0 0 1-.724-.724.724.724 0 0 1 1.449 0z"/><path style="fill:#f7cba4" d="m20.386 33.805-4.248-3.085a7.832 7.832 0 0 1-3.192-7.089l.736-7.623c.507-5.252 4.92-8.741 10.195-8.741s9.687 3.489 10.195 8.741l.736 7.623a7.832 7.832 0 0 1-3.192 7.089l-4.248 3.085a5.943 5.943 0 0 1-6.986 0z"/><path style="fill:#f95428" d="m12.025 30.843-2.695 4.67H3.939l-.081-.138-2.615-4.53 2.696-4.668H9.33z"/><path style="fill:#fc846d" d="m8.204 26.175-4.345 9.198-2.615-4.53 2.696-4.668z"/><path style="fill:#e0b394" d="M12.972 23.37a2.413 2.413 0 0 1-2.304-2.412 2.413 2.413 0 0 1 2.768-2.388m21.351 4.8a2.413 2.413 0 0 0-.109-4.825 2.486 2.486 0 0 0-.354.026m-18.732 6.563a4.728 4.728 0 0 0 1.099 3.321l4.439 5.455a3.522 3.522 0 0 0 .778.693 5.901 5.901 0 0 1-1.522-.798l-4.248-3.085a7.832 7.832 0 0 1-3.19-7.089l.735-7.625a10.242 10.242 0 0 1 10.043-9.255c-3.207.078-6.84 3.101-7.029 6.321l-1.105 12.06z"/><path style="fill:#4d4d4d" d="M29.409 12.302c-.479 1.536-2.833 2.701-5.667 2.701-2.799 0-5.133-1.139-5.649-2.646a26.814 26.814 0 0 1 11.316-.055z"/><path style="fill:#666" d="M30.765 9.409a10.216 10.216 0 0 1 2.761 4.138 25.143 25.143 0 0 0-4.117-1.245 26.814 26.814 0 0 0-11.316.055 25.12 25.12 0 0 0-3.861 1.19 10.247 10.247 0 0 1 9.647-6.797 10.212 10.212 0 0 1 6.885 2.661zM44.89 26.267a1.862 1.862 0 0 0-2.609.367L32.013 40.275a1.863 1.863 0 1 0 2.976 2.24l10.268-13.641a1.862 1.862 0 0 0-.367-2.609zM40.787 41.18l-3.059-2.302-1.619 2.15 3.059 2.302a1.345 1.345 0 1 0 1.619-2.15z"/><path style="fill:#fff" d="M4.357 30.068H8.91v1.552H4.357z"/><path style="fill:#4d4d4d" d="M19.273 23.096a.776.776 0 0 1-.776-.776v-1.24a.776.776 0 0 1 1.552 0v1.24a.777.777 0 0 1-.776.776z"/><path style="fill:#666" d="M26.71 19.009s.002-.021.009-.055.017-.088.033-.15l.028-.101c.015-.038.035-.074.057-.115.021-.042.048-.084.076-.131.028-.048.061-.084.098-.129.035-.045.075-.087.117-.134.044-.042.091-.083.141-.123.099-.087.219-.15.345-.22.131-.055.268-.115.417-.143.147-.039.3-.046.453-.054a2.2 2.2 0 0 1 .453.053c.149.027.286.087.417.143.126.071.247.134.345.22.051.041.098.083.141.123.042.046.081.088.117.134.035.045.069.083.096.129.026.045.051.087.072.128.021.042.041.078.055.115l.035.105c.019.063.028.118.035.152l.007.055s-.021 0-.057-.005l-.15-.015-.099-.013c-.038-.002-.074-.007-.114-.011-.078-.009-.161-.021-.251-.024-.045-.003-.087-.009-.132-.013a2.277 2.277 0 0 1-.138-.006c-.088-.012-.186-.005-.276-.017-.095.003-.184-.009-.279-.005-.093-.007-.186 0-.279-.006-.093.006-.186-.002-.279.005-.095-.003-.184.009-.279.005-.09.011-.188.005-.276.017a2.246 2.246 0 0 1-.138.006c-.045.003-.087.011-.132.013a4.668 4.668 0 0 0-.244.021l-.112.009c-.038.007-.071.015-.104.018-.063.011-.117.013-.152.018l-.057.003zm-9.213 0s.002-.021.009-.055.017-.088.033-.15l.028-.101c.015-.038.035-.074.057-.115.021-.042.048-.084.076-.131.028-.048.061-.084.098-.129.035-.045.075-.087.117-.134.044-.042.091-.083.141-.123.099-.087.219-.15.345-.22.131-.055.268-.115.417-.143.147-.039.3-.046.453-.054a2.2 2.2 0 0 1 .453.053c.149.027.286.087.417.143.126.071.247.134.345.22.051.041.098.083.141.123.042.046.081.088.117.134.035.045.069.083.096.129.026.045.051.087.072.128.021.042.041.078.055.115l.035.105c.019.063.028.118.035.152l.007.055s-.021 0-.057-.005l-.15-.015-.099-.013c-.038-.002-.074-.007-.114-.011-.078-.009-.161-.021-.251-.024-.045-.003-.087-.009-.132-.013a2.277 2.277 0 0 1-.138-.006c-.088-.012-.186-.005-.276-.017-.095.003-.184-.009-.279-.005-.093-.007-.186 0-.279-.006-.093.006-.186-.002-.279.005-.095-.003-.184.009-.279.005-.09.011-.188.005-.276.017a2.246 2.246 0 0 1-.138.006c-.045.003-.087.011-.132.013a4.668 4.668 0 0 0-.244.021l-.112.009c-.038.007-.071.015-.104.018-.063.011-.117.013-.152.018l-.057.003z"/><path style="fill:#4d4d4d" d="M28.485 23.096a.776.776 0 0 1-.776-.776v-1.24a.776.776 0 0 1 1.552 0v1.24a.777.777 0 0 1-.776.776z"/><path style="fill:#e0b394" d="M25.07 19.941v3.673a1.19 1.19 0 0 1-2.381 0v-3.673"/><path style="fill:#c49270" d="M25.483 28.562h-3.207a.517.517 0 1 1 0-1.035h3.207a.517.517 0 1 1 0 1.035z"/></svg>
+                <br>Go to Jail
+            </div>
+        </div>
+        <div class="space" id="31">
+            <div class="color group7">
+                <div class="title2 rotationRight">PACIFIC AVENUE</div>
+                <div class="rotationRight rotationRightPrice">PRICE $300</div>
+            </div>
+        </div>
+        <div class="space" id="32">
+            <div class="color group7">
+                <div class="title2 rotationRight">NORTH CAROLINA AVENUE</div>
+                <div class="rotationRight rotationRightPrice">PRICE $300</div>
+            </div>
+        </div>
+        <div class="space" id="33"> Community </div>
+        <div class="space" id="34">
+            <div class="color group7">
+                <div class="title2 rotationRight">PENNSYL-VANIA AVENUE</div>
+                <div class="rotationRight rotationRightPrice">PRICE $320</div>
+            </div>
+        </div>
+        <div class="space" id="35"> East </div>
+        <div class="space" id="36"> Chance </div>
+        <div class="space" id="37">
+            <div class="color group8">
+                <div class="title2 rotationRight" id="park">PARK PLACE</div>
+                <div class="rotationRight rotationRightPrice">PRICE $350</div>
+            </div>
+        </div>
+        <div class="space" id="38"> Super Tax </div>
+        <div class="space" id="39">
+            <div class="color group8">
+                <div class="title2 rotationRight" id="boardwalk">BOARDWALK</div>
+                <div class="rotationRight rotationRightPrice">PRICE $400</div>
+                <div id="chance"></div><div id="chancetext">CHANCE</div>
+                <div id="middleText"></div>
+                <div id="moneyDisplay"><script> document.write('Player 1: ' + moneyDisplay)</script></div>
+            </div>
+        </div>
+        <div class="corner" id="0">
+            <div class="cornerContainer">
+                <div class="goText"> GO </div>
+            </div>
+            <div class="goArrow">←</div>
+
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="diceButton">
+        <button onclick="rollDice()" id="diceButton"> Roll the dice </button>
+    </div>
+
+</body>
+</html>

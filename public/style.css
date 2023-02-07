@@ -1,5 +1,4 @@
 
-
 body {
     font-weight: 600;
     font-size: 14px;
@@ -17,15 +16,7 @@ div {
 
 
 }
-.split {
-    height: 100%;
-    width: 80%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-}
+
 
 .board {
     background-color: #2E3F4B;
@@ -48,7 +39,9 @@ div {
     width: 198px;
     border: 1px solid white;
     background-color: #2E3F4B;
+    z-index: 1;
 }
+
 .cornerContainer {
     position: relative;
     justify-content: flex-start;
@@ -67,8 +60,8 @@ div {
     position: relative;
     color: #eb0404;
     -webkit-text-stroke: 1px white;
-    font-size: 30px;
-    top: 150px;
+    font-size: 100px;
+    top: 100px;
 }
 
 .row {
@@ -79,9 +72,6 @@ div {
 .fix {
     display: flex;
     flex-direction: column;
-}
-.bottom {
-
 }
 .space2 {
     position: relative;
@@ -146,11 +136,7 @@ div {
     left: 80px;
     top: 60px;
     position: absolute;
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    transform: rotate(-90deg);
 }
 .rotationRightPrice {
     font-size: 0.85em;
@@ -180,7 +166,6 @@ div {
     font-size:14px;
     position: absolute;
     transform: rotate(180deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 .upsideprice {
     font-size: 0.85em;
@@ -203,11 +188,7 @@ div {
     left: -350px;
     font-size:14px;
     position: absolute;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
+    transform: rotate(135deg);
 }
 #community {
     border: 1px dashed black;
@@ -217,11 +198,7 @@ div {
     left: 150px;
     font-size:14px;
     position: absolute;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
+    transform: rotate(135deg);
 }
 #communitytext {
     width:150px;
@@ -230,11 +207,7 @@ div {
     left: 270px;
     font-size:14px;
     position: absolute;
-    -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
+    transform: rotate(135deg);
 }
 #chancetext {
     width:100px;
@@ -243,11 +216,7 @@ div {
     left: -345px;
     font-size:14px;
     position: absolute;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3.5);
+    transform: rotate(-45deg);
 }
 
 #middleText {
@@ -281,4 +250,39 @@ div {
     left: -900px;
     font-size:25px;
     position: absolute;
+}
+/* FÜR ICONS */
+.prison{
+    font-size: 20px;
+    transform: rotate(45deg);
+    position: relative;
+}
+
+.parking{
+    font-size: 25px;
+    transform: rotate(135deg);
+    position: relative;
+    top: 40px;
+}
+
+.goJail{
+    font-size: 20px;
+    top: 45px;
+    left: -10px;
+    transform: rotate(-135deg);
+    position: relative;
+}
+
+.smallCorner {
+    height: 140px;
+    width: 140px;
+    border: 1px solid white;
+    position: relative;
+    left: 57px;
+    background-color:  orange;
+    z-index: 2;
+}
+
+.textSize{
+    font-size: 20px;
 }
