@@ -20,12 +20,12 @@ let button = document.getElementById("diceButton");
 button.onclick = function(){
     let eyes = rollDice();
 
-    players[tempTurn].curField = eyes + players[tempTurn].curField;
-    if (players[tempTurn].curField >= 40) {
-        players[tempTurn].curField = players[tempTurn].curField - 40;
+    players[curPlayer].curField = eyes + players[curPlayer].curField;
+    if (players[curPlayer].curField >= 40) {
+        players[curPlayer].curField = players[curPlayer].curField - 40;
         getMoneyGo();
     }
     //playerTurn = playerID,  curField -> neues Feld auf welches gerollt wurde
-    move(players[tempTurn].playerId,players[tempTurn].curField);
+    move(players[curPlayer].playerId,players[curPlayer].curField);
     nextPlayer();
 };

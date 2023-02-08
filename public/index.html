@@ -187,7 +187,6 @@
                 <div class="rotationRight rotationRightPrice">PRICE $400</div>
                 <div id="chance"></div><div id="chancetext">CHANCE</div>
                 <div id="middleText"></div>
-                <div id="moneyDisplay"><script> document.write('Player 1: ' + moneyDisplay)</script></div>
             </div>
         </div>
         <div class="corner" id="0">
@@ -203,11 +202,13 @@
     </div>
     <div>
         <button onclick="rollDice()" id="diceButton"> Roll the dice </button>
+        <div id="moneyP1"></div>
+        <div id="moneyP2"></div>
     </div>
 
 <script src="/Assets/Player/players.js"></script>
+<script src="/Assets/Player/playerMovement.js"></script>
 <script src="/Assets/Dice/dice.js"></script>
 <script src="/Assets/Money/money.js"></script>
-<script src="/Assets/Player/playerMovement.js"></script>
 </body>
 </html>
