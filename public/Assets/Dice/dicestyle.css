@@ -78,6 +78,68 @@ button:hover, button:active {
     text-align: center;
     line-height: 2em;
 }
-.one-1 {
+.two-1, .three-1, .four-1, .five-1, .six-1 {
+    top: 20%;
+    left: 20%;
+}
+.four-3, .five-3, .six-4 {
+    top: 20%;
+    left: 80%; }
+
+.one-1, .three-2, .five-5 {
     top: 50%;
     left: 50%; }
+
+.four-2, .five-2, .six-3 {
+    top: 80%;
+    left: 20%; }
+
+.two-2, .three-3, .four-4, .five-4, .six-6 {
+    top: 80%;
+    left: 80%; }
+
+.six-2 {
+    top: 50%;
+    left: 20%; }
+
+.six-5 {
+    top: 50%;
+    left: 80%;
+}
+
+#dice-one-side-one.side.one{
+    visibility: hidden;
+}
+#dice-one-side-two.side.two{
+    visibility: hidden;
+}
+#dice-one-side-three.side.three{
+    visibility: hidden;
+}
+#dice-one-side-four.side.four{
+    visibility: hidden;
+}
+#dice-one-side-five.side.five{
+    visibility: hidden;
+}
+#dice-one-side-six.side.six{
+    visibility: hidden;
+}
+#dice-two-side-one.side.one{
+    visibility: hidden;
+}
+#dice-two-side-two.side.two{
+    visibility: hidden;
+}
+#dice-two-side-three.side.three{
+    visibility: hidden;
+}
+#dice-two-side-four.side.four{
+    visibility: hidden;
+}
+#dice-two-side-five.side.five{
+    visibility: hidden;
+}
+#dice-two-side-six.side.six{
+    visibility: hidden;
+}
