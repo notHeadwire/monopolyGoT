@@ -189,7 +189,14 @@
                 <div class="title2 rotationRight" id="boardwalk">BOARDWALK</div>
                 <div class="rotationRight rotationRightPrice">PRICE $400</div>
                 <div id="chance"></div><div id="chancetext">CHANCE</div>
-                <div id="middleText"></div>
+                <div id="middleText">
+                    <object class="dice"
+                            type="text/html"
+                            data="Assets/Dice/dice.html"
+                            height="400px"
+                            width="auto">
+                    </object>
+                </div>
                 <div id="moneyDisplay"><script> document.write('Player 1: ' + moneyDisplay)</script></div>
             </div>
         </div>
@@ -203,9 +210,9 @@
         </div>
     </div>
     </div>
-    <div class="diceButton">
-        <button onclick="rollDice()" id="diceButton"> Roll the dice </button>
-    </div>
 
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"></script>
 </body>
 </html>
