@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Monopoly GoT</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="/Assets/Dice/dice.js"></script>
-    <script src="Assets/Money/money.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
 <div class="table">
@@ -189,15 +186,7 @@
                 <div class="title2 rotationRight" id="boardwalk">BOARDWALK</div>
                 <div class="rotationRight rotationRightPrice">PRICE $400</div>
                 <div id="chance"></div><div id="chancetext">CHANCE</div>
-                <div id="middleText">
-                    <object class="dice"
-                            type="text/html"
-                            data="Assets/Dice/dice.html"
-                            height="400px"
-                            width="auto">
-                    </object>
-                </div>
-                <div id="moneyDisplay"><script> document.write('Player 1: ' + moneyDisplay)</script></div>
+                <div id="middleText"></div>
             </div>
         </div>
         <div class="corner" id="0">
@@ -205,14 +194,21 @@
                 <div class="goText"> GO </div>
             </div>
             <div class="goArrow">←</div>
-
+            <div class="player1" id="Player1"> 1</div>
+            <div class="player2" id="Player2"> 2</div>
         </div>
         </div>
     </div>
     </div>
+    <div class="menu">
+        <button onclick="rollDice()" id="diceButton"> Roll the dice </button>
+        <div id="moneyP1"></div>
+        <div id="moneyP2"></div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="/socket.io/socket.io.js"></script>
-<script src="/main.js"></script>
+<script src="/Assets/Player/players.js"></script>
+<script src="/Assets/Player/playerMovement.js"></script>
+<script src="/Assets/Dice/dice.js"></script>
+<script src="/Assets/Money/money.js"></script>
 </body>
 </html>
