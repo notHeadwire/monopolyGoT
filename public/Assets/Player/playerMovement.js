@@ -23,7 +23,7 @@ button.onclick = function(){
     players[curPlayer].curField = eyes + players[curPlayer].curField;
     if (players[curPlayer].curField >= 40) {
         players[curPlayer].curField = players[curPlayer].curField - 40;
-        getMoneyGo();
+        getMoneyGo(curPlayer);
     }
     //playerTurn = playerID,  curField -> neues Feld auf welches gerollt wurde
     move(players[curPlayer].playerId,players[curPlayer].curField);
