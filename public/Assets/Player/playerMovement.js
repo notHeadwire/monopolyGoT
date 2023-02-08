@@ -22,7 +22,7 @@ button.onclick = function(){
     curField = eyes + curField;
     if (curField >= 40) {
         curField = curField - 40;
-        //TODO Geld über los einfügen
+        getMoneyGo();
     }
     move('PlayerOne', curField);
 };
