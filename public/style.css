@@ -13,8 +13,8 @@ div {
 }
 
 .table {
-
-
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -291,6 +291,15 @@ div {
     height: 25px;
     width: 25px;
     background-color: black;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.player2{
+    height: 25px;
+    width: 25px;
+    background-color: yellow;
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
