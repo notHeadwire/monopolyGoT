@@ -1,13 +1,12 @@
+let socket=io();
 
-var socket = io();
-var messageButton = document.getElementById("roll");
-
-messageButton.addEventListener("click", emitMessage);
+let messageDiceButton = document.getElementById("diceButton")
+messageDiceButton.addEventListener("click", emitMessage);
 
 function emitMessage () {
     socket.emit("roll", "Client: " + socket.id);
 }
 
-socket.on("roll", function (result) {
+socket.on("roll result", function (result) {
     console.log(result);
 });

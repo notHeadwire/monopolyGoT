@@ -40,7 +40,7 @@ server.listen(port, function () {
 app.use(express.static(__dirname + '/public'));
 
 function roll () {
-    return rollDice();
+    return "rollDice()";
 }
 
 io.on('connection', function (socket) {
