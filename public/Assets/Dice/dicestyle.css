@@ -1,4 +1,4 @@
-body {
+#body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,10 +6,10 @@ body {
     background-color: #2E3F4B;
 }
 
-button {
+#diceButton{
     position: relative;
     top:80px;
-    left:10px;
+    left: -10px;
     padding: 15px 50px;
     color: #fff;
     background-color: dimgrey;
@@ -21,20 +21,20 @@ button {
     transition: .3s;
 }
 
-button:hover, button:active {
+#diceButton:hover, button:active {
     outline: none;
     background: #50514F;
     cursor: pointer;
     transform: translateY(15px);
 }
 
-.game {
+#game {
     position: relative;
     width: auto;
     height: 100%;
 }
 
-.container {
+.diceContainer {
     position: relative;
     display: inline-block;
     top: 200px;

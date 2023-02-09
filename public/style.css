@@ -231,11 +231,6 @@ div {
     text-align: center;
 
 }
-#diceButton{
-    position: relative;
-    top: 10px;
-    left: 640px;
-}
 
 #moneyP1{
     -moz-text-size-adjust: auto;
