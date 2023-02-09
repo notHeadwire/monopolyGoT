@@ -1,6 +1,6 @@
 const button = document.getElementById("diceButton");
 
-button.onclick = () => {
+button.onclick= function(){
     console.log("in Button click")
     rollDice()
 };
@@ -13,8 +13,8 @@ const rollDice = () => {
 
     vRollDiceOne(diceOne);
     vRollDiceTwo(diceTwo);
-
-    return diceOne + diceTwo
+    var rolledEyes=diceTwo+diceOne;
+    return rolledEyes
 };
 
 const vRollDiceOne = (diceOne) => {
