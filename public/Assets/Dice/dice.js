@@ -13,8 +13,7 @@ const rollDice = () => {
 
     vRollDiceOne(diceOne);
     vRollDiceTwo(diceTwo);
-    var rolledEyes=diceTwo+diceOne;
-    return rolledEyes
+    return diceTwo + diceOne
 };
 
 const vRollDiceOne = (diceOne) => {
