@@ -1,7 +1,7 @@
-var socket = io();
-var messageButton = document.getElementById("send-message");
+let socket=io();
 
-messageButton.addEventListener("click", emitMessage);
+let messageDiceButton = document.getElementById("diceButton")
+messageDiceButton.addEventListener("click", emitMessage);
 
 function emitMessage () {
     socket.emit("roll", "Client: " + socket.id);
