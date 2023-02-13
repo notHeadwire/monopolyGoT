@@ -1,6 +1,3 @@
-// Function to switch the object to a different div
-let curField = 0
-
 function move(playerId, fieldId){
     // Get sub-div element
     let player = document.getElementById(playerId);
@@ -15,9 +12,10 @@ function move(playerId, fieldId){
     field.appendChild(player);
 }
 // Get button element
-let button = document.getElementById("diceButton");
 
-button.onclick = function(){
+let button1 = document.getElementById("diceButton");
+button1.onclick = function(){
+    console.log("Player/playerMovement/buttonclick")
     let eyes = rollDice();
 
     players[curPlayer].curField = eyes + players[curPlayer].curField;

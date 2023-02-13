@@ -1,0 +1,145 @@
+#body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2E3F4B;
+}
+
+#diceButton{
+    position: relative;
+    top:80px;
+    left: -10px;
+    padding: 15px 50px;
+    color: #fff;
+    background-color: dimgrey;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s;
+}
+
+#diceButton:hover, button:active {
+    outline: none;
+    background: #50514F;
+    cursor: pointer;
+    transform: translateY(15px);
+}
+
+#game {
+    position: relative;
+    width: auto;
+    height: 100%;
+}
+
+.diceContainer {
+    position: relative;
+    display: inline-block;
+    top: 200px;
+}
+
+.dice {
+    position: relative;
+    width: 60px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: -10px 5px 5px -10px;
+    border-radius: 20px;
+    background-color: black;
+    box-shadow: inset 2px 2px grey;
+}
+
+.dice-one {
+    position: absolute;
+    left: 120px;
+}
+
+.dice-two {
+    position: absolute;
+    left: -20px;
+}
+
+.side {
+    position: absolute;
+    background-color: #ffF;
+    border-radius:5px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 2em;
+}
+.two-1, .three-1, .four-1, .five-1, .six-1 {
+    top: 20%;
+    left: 20%;
+}
+.four-3, .five-3, .six-4 {
+    top: 20%;
+    left: 80%; }
+
+.one-1, .three-2, .five-5 {
+    top: 50%;
+    left: 50%; }
+
+.four-2, .five-2, .six-3 {
+    top: 80%;
+    left: 20%; }
+
+.two-2, .three-3, .four-4, .five-4, .six-6 {
+    top: 80%;
+    left: 80%; }
+
+.six-2 {
+    top: 50%;
+    left: 20%; }
+
+.six-5 {
+    top: 50%;
+    left: 80%;
+}
+
+#dice-one-side-one.side.one{
+    visibility: hidden;
+}
+#dice-one-side-two.side.two{
+    visibility: hidden;
+}
+#dice-one-side-three.side.three{
+    visibility: hidden;
+}
+#dice-one-side-four.side.four{
+    visibility: hidden;
+}
+#dice-one-side-five.side.five{
+    visibility: hidden;
+}
+#dice-one-side-six.side.six{
+    visibility: hidden;
+}
+#dice-two-side-one.side.one{
+    visibility: hidden;
+}
+#dice-two-side-two.side.two{
+    visibility: hidden;
+}
+#dice-two-side-three.side.three{
+    visibility: hidden;
+}
+#dice-two-side-four.side.four{
+    visibility: hidden;
+}
+#dice-two-side-five.side.five{
+    visibility: hidden;
+}
+#dice-two-side-six.side.six{
+    visibility: hidden;
+}

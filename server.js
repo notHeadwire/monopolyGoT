@@ -1,3 +1,6 @@
+
+
+
 let sqlite3 = require("sqlite3").verbose();
 let db = new sqlite3.Database('./got.db',(err) => {
     if (err) {
@@ -6,7 +9,14 @@ let db = new sqlite3.Database('./got.db',(err) => {
     console.log('Connected to the got database.');
 });
 
-// db.exec('INSERT INTO (name) VALUES ("Horst");');
+
+db.exec('CREATE TABLE Player (\n' +
+    '    PlayerID int,\n' +
+    '    Money varchar(255),\n' +
+    '    Position varchar(255),\n' +
+    ');',err => err);
+db.exec('INSERT INTO Player (PlayerID)'+
+        'VALUES (12345);', err => err);
 
 db.close((err) => {
     if (err) {
@@ -30,15 +40,11 @@ server.listen(port, function () {
 app.use(express.static(__dirname + '/public'));
 
 function roll () {
-    return 3;
-}
-
-function move () {
-
+    return "rollDice()";
 }
 
 io.on('connection', function (socket) {
-    console.log("connection");
+    console.log("connection from client "+socket.id);
 
     socket.on('roll', function () {
         console.log("roll dice");
