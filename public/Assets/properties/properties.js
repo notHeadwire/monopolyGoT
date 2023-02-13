@@ -1,5 +1,7 @@
 const buyButton = document.getElementById('buyButton');
-let curStreetID;
+const diceButton = document.getElementById('diceButton');
+
+let curStreetID = 0;
 
 let MediterraneanAvenue = {streetID: "1", owner: "", price: 60, rent: 2};
 let BalticAvenue = {streetID: "3", owner: "", price: 60, rent: 4};
@@ -32,7 +34,6 @@ let ElectricCompany = {streetID: "12", owner: "", price: 150, rent: 4};
 let WaterWorks = {streetID: "28", owner: "", price: 150, rent: 4};
 
 
-
 let streetsList = [Boardwalk, ParkPlace, PennsylvaniaAvenue, NorthCarolinaAvenue, MarvinGardens, VentnorAvenue,
     AtlanticAvenue, BalticAvenue, MediterraneanAvenue, OrientalAvenue, VermontAvenue,
     ConnecticutAvenue, StCharlesPlace, StatesAvenue, VirginiaAvenue, StJamesPlace, TennesseeAvenue, NewYorkAvenue,
@@ -44,7 +45,9 @@ function checkProperty(){
    let curPlayerPos = players[curPlayer].curField;
        curStreetID = getStreetIndex(curPlayerPos);
 
-   if (streetsList[curStreetID].owner === ""){
+       console.log("Current Owner: " + streetsList[curStreetID].owner);
+
+   if (streetsList[curStreetID].owner.equals("")){
        showBuy();
    } else {
        hideBuy();
@@ -62,7 +65,13 @@ function payRent(streetID){
 }
 
 function getStreetIndex(fieldID) {
-    return streetsList.indexOf(fieldID);
+    if (streetsList.indexOf(fieldID) >= 0){
+        console.log("Index: " + streetsList.indexOf(fieldID));
+        return streetsList.indexOf(fieldID);
+    } else{
+        return 0;
+    }
+
 }
 
 function showBuy() {
@@ -74,12 +83,15 @@ function hideBuy() {
 }
 
 
-buyButton.onclick = function (){
+buyButton.click = function (){
     streetsList[curStreetID].owner = curPlayer;
     players[curPlayer].money -= streetsList[curStreetID].price;
-
 };
 
-button.onclick = function (){
-    checkProperty();
-}
+
+
+button.click = function (){
+    if (curStreetID === getStreetIndex(curPlayerPos)){
+        checkProperty();
+    }
+};

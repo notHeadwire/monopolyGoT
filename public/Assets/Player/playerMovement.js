@@ -15,7 +15,6 @@ function move(playerId, fieldId){
 
 let button1 = document.getElementById("diceButton");
 button1.onclick = function(){
-    console.log("Player/playerMovement/buttonclick")
     let eyes = rollDice();
 
     players[curPlayer].curField = eyes + players[curPlayer].curField;
