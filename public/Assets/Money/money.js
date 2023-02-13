@@ -1,4 +1,6 @@
 //Geld anzeigen
+let rent;
+let owner;
 
 document.querySelector('#moneyP1').innerHTML = 'Player 1: ' + players[0].money + "$";
 document.querySelector('#moneyP2').innerHTML = 'Player 2: ' + players[1].money + "$";
@@ -13,3 +15,10 @@ function getMoneyGo(Player) {
         document.querySelector('#moneyP2').innerHTML = 'Player 2: ' + players[curPlayer].money + "$";
     }
 }
+
+function refreshMoneyDisplay(){
+    document.querySelector('#moneyP1').innerHTML = 'Player 1: ' + players[curPlayer].money + "$";
+    document.querySelector('#moneyP2').innerHTML = 'Player 2: ' + players[curPlayer].money + "$";
+}
+
+
