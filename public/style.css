@@ -335,9 +335,9 @@ div {
 }
 
 
-#endTurnButton{
+#endTurnButton {
     position: relative;
-    top:70px;
+    top: 70px;
     height: 30px;
     width: 80px;
     padding: 15px 50px;
@@ -349,11 +349,19 @@ div {
     box-shadow: 1px 3px #50514F;
     outline: none;
     transition: .3s;
-=======
+}
+
+#endTurnButton:hover, button:active {
+    outline: none;
+    background: #50514F;
+    cursor: pointer;
+    transform: translateY(15px);
+}
 
 .isSold {
     font-size: 20px;
     color: red;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     visibility: hidden;
+}
 
