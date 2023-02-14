@@ -127,11 +127,13 @@ div {
 }
 .price {
     font-size: 0.85em;
-    margin-top: 45px;
+    margin-top: 25px;
+    color: white;
 }
 .price2 {
     font-size: 0.85em;
-    margin-top: 61px;
+    margin-top: 41px;
+    color: white;
 }
 .rotationRight {
     width: 0;
@@ -141,8 +143,9 @@ div {
     transform: rotate(-90deg);
 }
 .rotationRightPrice {
+    color: white;
     font-size: 0.85em;
-    left: 140px;
+    left: 130px;
     top: 40px;
     width: 85px;
 }
@@ -156,8 +159,9 @@ div {
 .rotationLeftFix {top:5px;}
 
 .rotationLeftPrice {
+    color: white;
     font-size: 0.85em;
-    left: -176px;
+    left: -166px;
     top: 40px;
     width: 85px;
 }
@@ -170,6 +174,7 @@ div {
     transform: rotate(180deg);
 }
 .upsideprice {
+    color: white;
     font-size: 0.85em;
     left: 10px;
     top: 10px;
@@ -304,4 +309,12 @@ div {
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
+}
+
+.isSold {
+    font-size: 20px;
+    color: red;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    visibility: hidden;
+
 }
