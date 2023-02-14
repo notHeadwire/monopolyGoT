@@ -108,9 +108,13 @@ function payRent(curPlayerPos){
     let rent = boardMap.get(curPlayerPos).rent;
     let ownerID = boardMap.get(curPlayerPos).owner;
 
-    players[curPlayer].money = players[curPlayer].money - rent;
-    players[ownerID].money = players[ownerID].money + rent;
-    refreshMoneyDisplay();
+    if (boardMap.get(curPlayerPos).owner == "Board") {
+        console.log("Ereignisfeld")
+    } else {
+        players[curPlayer].money = players[curPlayer].money - rent;
+        players[ownerID].money = players[ownerID].money + rent;
+        refreshMoneyDisplay();
+    }
 }
 
 
