@@ -15,6 +15,7 @@ function move(playerId, fieldId){
 
 let button1 = document.getElementById("diceButton");
 button1.onclick = function(){
+    console.log("Player/playerMovement/buttonclick")
     let eyes = rollDice();
 
     players[curPlayer].curField = eyes + players[curPlayer].curField;
@@ -24,5 +25,5 @@ button1.onclick = function(){
     }
     //playerTurn = playerID,  curField -> neues Feld auf welches gerollt wurde
     move(players[curPlayer].playerId,players[curPlayer].curField);
-
+    nextPlayer();
 };
