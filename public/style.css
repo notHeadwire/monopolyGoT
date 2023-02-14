@@ -127,13 +127,11 @@ div {
 }
 .price {
     font-size: 0.85em;
-    margin-top: 25px;
-    color: white;
+    margin-top: 45px;
 }
 .price2 {
     font-size: 0.85em;
-    margin-top: 41px;
-    color: white;
+    margin-top: 61px;
 }
 .rotationRight {
     width: 0;
@@ -143,9 +141,8 @@ div {
     transform: rotate(-90deg);
 }
 .rotationRightPrice {
-    color: white;
     font-size: 0.85em;
-    left: 130px;
+    left: 140px;
     top: 40px;
     width: 85px;
 }
@@ -159,9 +156,8 @@ div {
 .rotationLeftFix {top:5px;}
 
 .rotationLeftPrice {
-    color: white;
     font-size: 0.85em;
-    left: -166px;
+    left: -176px;
     top: 40px;
     width: 85px;
 }
@@ -174,7 +170,6 @@ div {
     transform: rotate(180deg);
 }
 .upsideprice {
-    color: white;
     font-size: 0.85em;
     left: 10px;
     top: 10px;
@@ -310,6 +305,48 @@ div {
     border-radius: 50%;
     display: inline-block;
 }
+
+
+#buyButton{
+    position: relative;
+    top:50px;
+    height: 30px;
+    width: 80px;
+    padding: 15px 50px;
+    color: #fff;
+    background-color: dimgrey;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s;
+}
+
+#buyButton:hover, button:active {
+    outline: none;
+    background: #50514F;
+    cursor: pointer;
+    transform: translateY(15px);
+}
+
+
+#endTurnButton{
+    position: relative;
+    top:70px;
+    height: 30px;
+    width: 80px;
+    padding: 15px 50px;
+    color: #fff;
+    background-color: dimgrey;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s;
+}
+
 
 .isSold {
     font-size: 20px;
