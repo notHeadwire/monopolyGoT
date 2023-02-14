@@ -27,7 +27,7 @@ div {
     flex-direction: row;
     margin-left: 100px;
     position: absolute;
-    left: 100px;
+    left: 150px;
 }
 .space {
     height: 98px;
@@ -311,10 +311,49 @@ div {
     display: inline-block;
 }
 
+#buyButton{
+    position: relative;
+    top:50px;
+    height: 30px;
+    width: 80px;
+    padding: 15px 50px;
+    color: #fff;
+    background-color: dimgrey;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s;
+}
+
+#buyButton:hover, button:active {
+    outline: none;
+    background: #50514F;
+    cursor: pointer;
+    transform: translateY(15px);
+}
+
+
+#endTurnButton{
+    position: relative;
+    top:70px;
+    height: 30px;
+    width: 80px;
+    padding: 15px 50px;
+    color: #fff;
+    background-color: dimgrey;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s;
+=======
+
 .isSold {
     font-size: 20px;
     color: red;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     visibility: hidden;
 
-}
