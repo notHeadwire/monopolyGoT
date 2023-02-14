@@ -17,8 +17,8 @@ function getMoneyGo(Player) {
 }
 
 function refreshMoneyDisplay(){
-    document.querySelector('#moneyP1').innerHTML = 'Player 1: ' + players[curPlayer].money + "$";
-    document.querySelector('#moneyP2').innerHTML = 'Player 2: ' + players[curPlayer].money + "$";
+    document.querySelector('#moneyP1').innerHTML = 'Player 1: ' + players[0].money + "$";
+    document.querySelector('#moneyP2').innerHTML = 'Player 2: ' + players[1].money + "$";
 }
 
 

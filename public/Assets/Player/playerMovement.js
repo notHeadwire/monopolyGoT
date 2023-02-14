@@ -24,5 +24,5 @@ button1.onclick = function(){
     }
     //playerTurn = playerID,  curField -> neues Feld auf welches gerollt wurde
     move(players[curPlayer].playerId,players[curPlayer].curField);
-    nextPlayer();
+
 };

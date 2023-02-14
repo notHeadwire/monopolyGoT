@@ -1,8 +1,3 @@
-const buyButton = document.getElementById('buyButton');
-const diceButton = document.getElementById('diceButton');
-
-let curStreetID = 0;
-
 let MediterraneanAvenue = {streetID: "1", owner: "", price: 60, rent: 2};
 let BalticAvenue = {streetID: "3", owner: "", price: 60, rent: 4};
 let OrientalAvenue = {streetID: "6", owner: "", price: 100, rent: 6};
@@ -34,46 +29,90 @@ let ElectricCompany = {streetID: "12", owner: "", price: 150, rent: 4};
 let WaterWorks = {streetID: "28", owner: "", price: 150, rent: 4};
 
 
+const boardMap = new Map([  [0, 'GO'],
+    [1, MediterraneanAvenue],
+    [2, 'Community Chest'],
+    [3, BalticAvenue],
+    [4, 'Income Tax'],
+    [5, ReadingRailroad],
+    [6, OrientalAvenue],
+    [7, 'Chance'],
+    [8, VermontAvenue],
+    [9, ConnecticutAvenue],
+    [10, 'Jail / Just Visiting'],
+    [11, StCharlesPlace],
+    [12, ElectricCompany],
+    [13, StatesAvenue],
+    [14, VirginiaAvenue],
+    [15, PennsylvaniaRailroad],
+    [16, StJamesPlace],
+    [17, 'Community Chest'],
+    [18, TennesseeAvenue],
+    [19, NewYorkAvenue],
+    [20, 'Free Parking'],
+    [21, KentuckyAvenue],
+    [22, 'Chance'],
+    [23, IndianaAvenue],
+    [24, IllinoisAvenue],
+    [25, BORailroad],
+    [26, AtlanticAvenue],
+    [27, VentnorAvenue],
+    [28, WaterWorks],
+    [29, MarvinGardens],
+    [30, 'Go To Jail'],
+    [31, PacificAvenue],
+    [32, NorthCarolinaAvenue],
+    [33, 'Community Chest'],
+    [34, PennsylvaniaAvenue],
+    [35, ShortLine],
+    [36, 'Chance'],
+    [37, ParkPlace],
+    [38, 'Super Tax'],
+    [39, Boardwalk]
+]);
+
+/*
 let streetsList = [Boardwalk, ParkPlace, PennsylvaniaAvenue, NorthCarolinaAvenue, MarvinGardens, VentnorAvenue,
     AtlanticAvenue, BalticAvenue, MediterraneanAvenue, OrientalAvenue, VermontAvenue,
     ConnecticutAvenue, StCharlesPlace, StatesAvenue, VirginiaAvenue, StJamesPlace, TennesseeAvenue, NewYorkAvenue,
     KentuckyAvenue, IndianaAvenue, IllinoisAvenue, BORailroad, PennsylvaniaRailroad,
-    ShortLine, ReadingRailroad, ElectricCompany, WaterWorks];
-
+    ShortLine, ReadingRailroad, ElectricCompany, WaterWorks, PacificAvenue];
+*/
 
 function checkProperty(){
    let curPlayerPos = players[curPlayer].curField;
-       curStreetID = getStreetIndex(curPlayerPos);
+       console.log("Current Owner: " + boardMap.get(curPlayerPos).owner);
 
-       console.log("Current Owner: " + streetsList[curStreetID].owner);
-
-   if (streetsList[curStreetID].owner.equals("")){
+   if (boardMap.get(curPlayerPos).owner == ""){
        showBuy();
    } else {
        hideBuy();
-       payRent(curStreetID);
+       payRent(curPlayerPos);
    }
 }
 
-function payRent(streetID){
-    let rent = streetsList[streetID].rent;
-    let ownerID = streetsList[streetID].owner;
+function payRent(curPlayerPos){
+    let rent = boardMap.get(curPlayerPos).rent;
+    let ownerID = boardMap.get(curPlayerPos).owner;
 
     players[curPlayer].money = players[curPlayer].money - rent;
     players[ownerID].money = players[ownerID].money + rent;
     refreshMoneyDisplay();
 }
 
+
+/*
 function getStreetIndex(fieldID) {
-    if (streetsList.indexOf(fieldID) >= 0){
+    if (streetsList.indexOf(streetsListfieldID) >= 0){
         console.log("Index: " + streetsList.indexOf(fieldID));
         return streetsList.indexOf(fieldID);
     } else{
         return 0;
     }
-
 }
+*/
 
+let buyButton = document.getElementById('buyButton');
 function showBuy() {
     buyButton.classList.add('show');
 }
@@ -83,15 +122,19 @@ function hideBuy() {
 }
 
 
-buyButton.click = function (){
-    streetsList[curStreetID].owner = curPlayer;
-    players[curPlayer].money -= streetsList[curStreetID].price;
+buyButton.onclick = function (){
+    let curPlayerPos = players[curPlayer].curField;
+    console.log("curplayer: " + curPlayer);
+    boardMap.get(curPlayerPos).owner = curPlayer;
+    players[curPlayer].money -= boardMap.get(curPlayerPos).price;
+    refreshMoneyDisplay();
 };
 
 
+let diceButtonCheckProp = document.getElementById("diceButton");
+diceButtonCheckProp.addEventListener("click",
+    function (){
+    console.log("In Buttonfunction Property")
+            checkProperty();
 
-button.click = function (){
-    if (curStreetID === getStreetIndex(curPlayerPos)){
-        checkProperty();
-    }
-};
+    });
