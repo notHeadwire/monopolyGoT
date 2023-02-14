@@ -6,6 +6,7 @@ let players = [p1, p2];
 
 
 function nextPlayer(){
+    noMoney(curPlayer);
     curPlayer = curPlayer + 1;
     if (curPlayer > players.length -1) {
         curPlayer = 0;

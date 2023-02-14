@@ -136,5 +136,4 @@ diceButtonCheckProp.addEventListener("click",
     function (){
     console.log("In Buttonfunction Property")
             checkProperty();
-
     });

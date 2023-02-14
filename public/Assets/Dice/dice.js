@@ -1,19 +1,65 @@
 const button = document.getElementById("diceButton");
-
+let diceThrow = 0;
+let playerturn;
 button.onclick= function(){
     console.log("in Button click")
-    rollDice()
+        rollDice()
 };
+
+function checkPash (diceOne, diceTwo, player, dicethrow){
+    console.log("checkPash/ playerturn: "+playerturn )
+    if (playerturn===undefined){
+        playerturn=player
+        console.log("checkPash/ playerturn undefinded dicethrow: " + diceThrow)
+        return false
+    }
+    console.log("checkPash/ playerturn: "+playerturn)
+    console.log("checkPash/ player: "+player)
+    if (playerturn!==player) {
+        console.log("checkPash/ playerturn != player")
+        if (dicethrow === 0) {
+
+            if (diceTwo === diceOne) {
+                dicethrow = 0;
+                return true
+            } else {
+                diceThrow++;
+            }
+            playerturn=player
+            return false
+        }
+        return false
+    }else{
+        diceThrow++;
+        return false
+    }
+}
 
 const rollDice = () => {
     const diceOne = (Math.floor(Math.random() * 6) + 1);
     const diceTwo = (Math.floor(Math.random() * 6) + 1);
-
-    console.log(diceOne + ' ' + diceTwo);
-
-    vRollDiceOne(diceOne);
-    vRollDiceTwo(diceTwo);
-    return diceTwo + diceOne
+    console.log("rollDice diceThrow: "+diceThrow)
+    if(checkPash(diceOne, diceTwo, curPlayer, diceThrow))
+    {
+        if (diceThrow===0) {
+            console.log("rollDice/ Pash /diceThrow===0")
+            vRollDiceOne(diceOne);
+            vRollDiceTwo(diceTwo);
+            return diceTwo + diceOne
+        }
+        return 0
+    }else{
+        console.log("rollDice/ no Pash diceThrow: "+ diceThrow)
+        if (diceThrow===0){
+        console.log(diceOne + ' ' + diceTwo);
+        vRollDiceOne(diceOne);
+        vRollDiceTwo(diceTwo);
+        return diceTwo + diceOne
+        }else{
+            diceThrow++;
+            return 0
+        }
+    }
 };
 
 const vRollDiceOne = (diceOne) => {
