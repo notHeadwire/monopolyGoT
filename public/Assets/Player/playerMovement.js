@@ -16,7 +16,6 @@ function move(playerId, fieldId){
 let button1 = document.getElementById("diceButton");
 button1.onclick = function(){
     let eyes = rollDice();
-
     players[curPlayer].curField = eyes + players[curPlayer].curField;
     if (players[curPlayer].curField >= 40) {
         players[curPlayer].curField = players[curPlayer].curField - 40;

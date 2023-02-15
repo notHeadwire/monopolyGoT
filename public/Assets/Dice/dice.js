@@ -1,19 +1,98 @@
 const button = document.getElementById("diceButton");
-
-button.onclick= function(){
+let diceThrow = 0;
+let lastplayer;
+let stopAfterNoPash = Boolean(false);
+let pashCounter = 0;
+button.onclick = function () {
     console.log("in Button click")
     rollDice()
 };
 
+function checkPash(diceOne, diceTwo, player) {
+
+    if (diceOne === diceTwo) {
+
+        console.log("diceThrow: " + diceThrow);
+        diceThrow = 0;
+
+        if (lastplayer === undefined) {
+            lastplayer = player;
+            return true;
+        }
+        if (lastplayer !== player) {
+            lastplayer = player;
+            return true;
+        }
+        if (lastplayer === player) {
+            return true;
+        }
+    } else {
+        if (lastplayer === undefined) {
+            lastplayer = player;
+            return false;
+        }
+        if (lastplayer !== player) {
+            lastplayer = player;
+            diceThrow = 0;
+            return false;
+        }
+        if (lastplayer === player) {
+            return false;
+        }
+    }
+
+
+}
+
 const rollDice = () => {
+
+    console.log("pashCounter: " + pashCounter)
     const diceOne = (Math.floor(Math.random() * 6) + 1);
     const diceTwo = (Math.floor(Math.random() * 6) + 1);
 
-    console.log(diceOne + ' ' + diceTwo);
+    // Mock für max 3 mal Pasch
+    // diceOne = 5;
+    // diceTwo = 5;
+    console.log("rollDice diceThrow: " + diceThrow)
 
-    vRollDiceOne(diceOne);
-    vRollDiceTwo(diceTwo);
-    return diceTwo + diceOne
+    console.log("---vor Prüfung oben in rollDice: " + stopAfterNoPash);
+    if (stopAfterNoPash === true) {
+        return 0;
+    }
+
+    if (checkPash(diceOne, diceTwo, curPlayer)) {
+
+        console.log("rollDice/ Pash /diceThrow===0")
+        if (pashCounter < 3){
+            vRollDiceOne(diceOne);
+            vRollDiceTwo(diceTwo);
+            pashCounter++
+            return diceTwo + diceOne
+        }
+        return 0
+
+    } else {
+        console.log("rollDice/ no Pash diceThrow: " + diceThrow)
+        if (diceThrow === 0) {
+            console.log(diceOne + ' ' + diceTwo);
+            vRollDiceOne(diceOne);
+            vRollDiceTwo(diceTwo);
+            diceThrow++
+
+            console.log("---in else in if: " + stopAfterNoPash);
+            stopAfterNoPash = Boolean(true);
+            console.log("---in else in if after setting true: " + stopAfterNoPash);
+
+            return diceTwo + diceOne
+        }
+
+        console.log("---in else: " + stopAfterNoPash);
+        stopAfterNoPash = Boolean(true);
+        console.log("---in else after setting true: " + stopAfterNoPash);
+        // let disableDiceButton = document.getElementById("diceButton");
+        // disableDiceButton.style.visibility = 'hidden';
+        return 0
+    }
 };
 
 const vRollDiceOne = (diceOne) => {

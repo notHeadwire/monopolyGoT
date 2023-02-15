@@ -16,6 +16,13 @@ function getMoneyGo(Player) {
     }
 }
 
+function noMoney(Player){
+    curPlayer=Player
+    if (players[curPlayer].money<=0){
+        alert("Player "+ curPlayer +" ran out of money!")
+    }
+}
+
 function refreshMoneyDisplay(){
     document.querySelector('#moneyP1').innerHTML = 'Player 1: ' + players[0].money + "$";
     document.querySelector('#moneyP2').innerHTML = 'Player 2: ' + players[1].money + "$";
