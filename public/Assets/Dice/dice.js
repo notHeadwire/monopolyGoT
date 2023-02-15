@@ -1,38 +1,49 @@
 const button = document.getElementById("diceButton");
 let diceThrow = 0;
-let playerturn;
+let lastplayer;
 button.onclick= function(){
     console.log("in Button click")
         rollDice()
 };
 
-function checkPash (diceOne, diceTwo, player, dicethrow){
-    console.log("checkPash/ playerturn: "+playerturn )
-    if (playerturn===undefined){
-        playerturn=player
-        console.log("checkPash/ playerturn undefinded dicethrow: " + diceThrow)
-        return false
-    }
-    console.log("checkPash/ playerturn: "+playerturn)
-    console.log("checkPash/ player: "+player)
-    if (playerturn!==player) {
-        console.log("checkPash/ playerturn != player")
-        if (dicethrow === 0) {
+function checkPash (diceOne, diceTwo, player){
 
-            if (diceTwo === diceOne) {
-                dicethrow = 0;
-                return true
-            } else {
-                diceThrow++;
-            }
-            playerturn=player
+    if (diceOne===diceTwo){
+        diceThrow=0
+        if (lastplayer===undefined){
+            lastplayer=player
+            return true
+        }
+        if (lastplayer!==player){
+            lastplayer=player
+            return true
+        }
+        if (lastplayer===player){
+            return true
+        }
+    }else{
+        if (lastplayer===undefined){
+            lastplayer=player
             return false
         }
-        return false
-    }else{
-        diceThrow++;
-        return false
+        if (lastplayer!==player){
+            lastplayer=player
+            diceThrow=0
+            return false
+        }
+        if (lastplayer===player){
+            return false
+        }
     }
+
+
+
+
+
+
+
+
+
 }
 
 const rollDice = () => {
@@ -41,24 +52,22 @@ const rollDice = () => {
     console.log("rollDice diceThrow: "+diceThrow)
     if(checkPash(diceOne, diceTwo, curPlayer, diceThrow))
     {
-        if (diceThrow===0) {
+            diceThrow++
             console.log("rollDice/ Pash /diceThrow===0")
             vRollDiceOne(diceOne);
             vRollDiceTwo(diceTwo);
             return diceTwo + diceOne
-        }
-        return 0
+
     }else{
         console.log("rollDice/ no Pash diceThrow: "+ diceThrow)
         if (diceThrow===0){
         console.log(diceOne + ' ' + diceTwo);
         vRollDiceOne(diceOne);
         vRollDiceTwo(diceTwo);
+        diceThrow++
         return diceTwo + diceOne
-        }else{
-            diceThrow++;
-            return 0
         }
+            return 0
     }
 };
 
