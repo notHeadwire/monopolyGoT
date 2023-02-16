@@ -10,3 +10,5 @@ function emitMessage () {
 socket.on("roll result", function (result) {
     console.log(result);
 });
+
+

@@ -41,7 +41,7 @@ let Boardwalk = {streetID: "39", owner: "", price: 400, rent: 50};
 
 
 
-const boardMap = new Map([
+let boardMap = new Map([
     [0, GO],
     [1, MediterraneanAvenue],
     [2, Community],
