@@ -47,8 +47,12 @@ function checkPash(diceOne, diceTwo, player) {
 const rollDice = () => {
 
     console.log("pashCounter: " + pashCounter)
-    const diceOne = (Math.floor(Math.random() * 6) + 1);
-    const diceTwo = (Math.floor(Math.random() * 6) + 1);
+    // const diceOne = (Math.floor(Math.random() * 6) + 1);
+    // const diceTwo = (Math.floor(Math.random() * 6) + 1);
+
+    // Mock für buy
+    diceOne = 2;
+    diceTwo = 1;
 
     // Mock für max 3 mal Pasch
     // diceOne = 5;

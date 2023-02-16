@@ -96,7 +96,7 @@ function checkProperty(){
    let curPlayerPos = players[curPlayer].curField;
        console.log("Current Owner: " + boardMap.get(curPlayerPos).owner);
 
-   if (boardMap.get(curPlayerPos).owner == ""){
+   if (boardMap.get(curPlayerPos).owner === ""){
        showBuy();
    } else {
        hideBuy();
@@ -108,11 +108,14 @@ function payRent(curPlayerPos){
     let rent = boardMap.get(curPlayerPos).rent;
     let ownerID = boardMap.get(curPlayerPos).owner;
 
-    if (boardMap.get(curPlayerPos).owner == "Board") {
+    if (boardMap.get(curPlayerPos).owner === "Board") {
         console.log("Ereignisfeld")
     } else {
+        console.log("IN PAYRENT FOR PLAYER " + rent);
+
         players[curPlayer].money = players[curPlayer].money - rent;
         players[ownerID].money = players[ownerID].money + rent;
+
         refreshMoneyDisplay();
     }
 }
