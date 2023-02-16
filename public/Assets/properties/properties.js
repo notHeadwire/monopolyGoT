@@ -39,6 +39,7 @@ let ParkPlace = {streetID: "37", owner: "", price: 350, rent: 35};
 let SuperTax = {streetID: "38", owner: "Board", price: 0, rent: 25};
 let Boardwalk = {streetID: "39", owner: "", price: 400, rent: 50};
 
+let buyOnlyOnce = 0;
 
 
 const boardMap = new Map([
@@ -92,26 +93,26 @@ let streetsList = [Boardwalk, ParkPlace, PennsylvaniaAvenue, NorthCarolinaAvenue
     ShortLine, ReadingRailroad, ElectricCompany, WaterWorks, PacificAvenue];
 */
 
-function checkProperty(){
-   let curPlayerPos = players[curPlayer].curField;
-       console.log("Current Owner: " + boardMap.get(curPlayerPos).owner);
+function checkProperty() {
+    let curPlayerPos = players[curPlayer].curField;
+    console.log("Current Owner: " + boardMap.get(curPlayerPos).owner);
 
-   if (boardMap.get(curPlayerPos).owner === ""){
-       showBuy();
-   } else {
-       hideBuy();
-       payRent(curPlayerPos);
-   }
+    if (boardMap.get(curPlayerPos).owner === "") {
+        showBuy();
+    } else {
+        hideBuy();
+        payRent(curPlayerPos);
+    }
 }
 
-function payRent(curPlayerPos){
+function payRent(curPlayerPos) {
     let rent = boardMap.get(curPlayerPos).rent;
     let ownerID = boardMap.get(curPlayerPos).owner;
 
     if (boardMap.get(curPlayerPos).owner === "Board") {
         console.log("Ereignisfeld")
     } else {
-        console.log("IN PAYRENT FOR PLAYER " + rent);
+        console.log("IN PAYRENT FOR PLAYER. Rent: " + rent);
 
         players[curPlayer].money = players[curPlayer].money - rent;
         players[ownerID].money = players[ownerID].money + rent;
@@ -133,27 +134,40 @@ function getStreetIndex(fieldID) {
 */
 
 let buyButton = document.getElementById('buyButton');
+
 function showBuy() {
     buyButton.classList.add('show');
+    buyButton.classList.remove('hide');
 }
 
 function hideBuy() {
     buyButton.classList.remove('show');
+    buyButton.classList.add('hide');
 }
 
 
-buyButton.onclick = function (){
+buyButton.onclick = function () {
     let curPlayerPos = players[curPlayer].curField;
     console.log("curplayer: " + curPlayer);
-    boardMap.get(curPlayerPos).owner = curPlayer;
-    players[curPlayer].money -= boardMap.get(curPlayerPos).price;
-    refreshMoneyDisplay();
+    if (boardMap.get(curPlayerPos).owner === "Board") {
+        console.log("Feld gehört dem Board (GO, Knast, Ereginis, ...)")
+        return;
+    }
+
+    if (buyOnlyOnce === 0) {
+        boardMap.get(curPlayerPos).owner = curPlayer;
+        players[curPlayer].money -= boardMap.get(curPlayerPos).price;
+        refreshMoneyDisplay();
+        buyOnlyOnce++;
+        hideBuy();
+    }
+
 };
 
 
 let diceButtonCheckProp = document.getElementById("diceButton");
 diceButtonCheckProp.addEventListener("click",
-    function (){
-    console.log("In Buttonfunction Property")
-            checkProperty();
+    function () {
+        console.log("In Buttonfunction Property")
+        checkProperty();
     });

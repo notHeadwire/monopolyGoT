@@ -300,6 +300,8 @@ div {
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
+    position: relative;
+    z-index: 999;
 }
 
 .player2{
@@ -309,6 +311,8 @@ div {
     border: 2px solid white;
     border-radius: 50%;
     display: inline-block;
+    position: relative;
+    z-index: 999;
 }
 
 #buyButton{
@@ -364,4 +368,14 @@ div {
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     visibility: hidden;
 }
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+
 
