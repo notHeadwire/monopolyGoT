@@ -111,8 +111,11 @@ function payRent(curPlayerPos){
     if (boardMap.get(curPlayerPos).owner === "Board") {
         console.log("Ereignisfeld")
     } else {
+        console.log("IN PAYRENT FOR PLAYER " + rent);
+
         players[curPlayer].money = players[curPlayer].money - rent;
         players[ownerID].money = players[ownerID].money + rent;
+
         refreshMoneyDisplay();
     }
 }
