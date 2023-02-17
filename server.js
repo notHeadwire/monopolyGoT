@@ -1,6 +1,4 @@
 
-
-
 let sqlite3 = require("sqlite3").verbose();
 let db = new sqlite3.Database('./got.db',(err) => {
     if (err) {
@@ -51,4 +49,56 @@ io.on('connection', function (socket) {
         var result = roll();
         io.emit("roll result", result);
     });
+
+    socket.on('saveGame', function (){
+        console.log("soket saveGame")
+        saveGame()});
+    socket.on('loadGame', loadGame())
 });
+
+let fs = require('fs');
+const config = JSON.parse(fs.readFileSync("./config.json"))
+
+
+
+
+function saveGame(){
+    // Define an object to represent the state
+    const state = {
+        player: players,
+        map: boardMap
+    };
+
+// Convert the object to a JSON string
+    const stateJson = JSON.stringify(state);
+
+// Write the JSON string to a file
+    //const fs = require('fs'); // if using Node.js
+    fs.writeFile('state.json', stateJson, (err) => {
+        if (err) {
+            console.error(err);
+        } else {
+            console.log('State file saved.');
+            alert("Game saved");
+        }
+    });
+}
+
+function loadGame(){
+    //const fs = require('fs'); // if using Node.js
+
+// Read the state file
+    fs.readFile('state.json', (err, data) => {
+        if (err) {
+            console.error(err);
+        } else {
+            // Parse the JSON data into an object
+            const state = JSON.parse(data);
+
+            boardMap= state.map;
+            players=state.player;
+            alert("Game loaded");
+        }
+    });
+
+}

@@ -10,5 +10,15 @@ function emitMessage () {
 socket.on("roll result", function (result) {
     console.log(result);
 });
+const saveButton = document.getElementById("saveGame");
+const loadButton = document.getElementById("loadGame");
 
+loadButton.onclick= function (){
+    console.log("Loadgame Button");
+    socket.emit('click', "loadGame")
+}
+saveButton.onclick= function (){
+    console.log("Savegame Button");
+    socket.emit('click', "saveGame")
+}
 

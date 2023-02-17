@@ -54,8 +54,6 @@ square[37] = new Square("Park Place", "$350", "#0000FF", 350, 10, 35);
 square[38] = new Square("LUXURY TAX", "Pay $100", "#FFFFFF");
 square[39] = new Square("Boardwalk", "$400", "#0000FF", 400, 10, 50);
 
-//todo INITIATOR
-
 for (let i = 0; i < square.length; i++) {
     document.getElementById("field" + i).innerHTML = square[i].name;
     document.querySelector("field" + i).style.backgroundColor = square[i].color;

@@ -312,8 +312,8 @@ div {
 }
 
 #buyButton{
-    position: relative;
-    top:50px;
+    position: absolute;
+    top:200px;
     height: 30px;
     width: 80px;
     padding: 15px 50px;
@@ -336,8 +336,8 @@ div {
 
 
 #endTurnButton {
-    position: relative;
-    top: 70px;
+    position: absolute;
+    top: 300px;
     height: 30px;
     width: 80px;
     padding: 15px 50px;
@@ -363,5 +363,50 @@ div {
     color: red;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     visibility: hidden;
+}
+
+#saveGame{
+    position: absolute;
+    top:500px;
+    height: 30px;
+    width: 80px;
+    padding: 15px 50px;
+    color: #fff;
+    background-color: dimgrey;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s;
+}
+
+#saveGame:hover, button:active {
+    outline: none;
+    background: #50514F;
+    cursor: pointer;
+    transform: translateY(15px);
+}
+#loadGame{
+    position: absolute;
+    top:570px;
+    height: 30px;
+    width: 80px;
+    padding: 15px 50px;
+    color: #fff;
+    background-color: dimgrey;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
+    transition: .3s;
+}
+
+#loadGame:hover, button:active {
+    outline: none;
+    background: #50514F;
+    cursor: pointer;
+    transform: translateY(15px);
 }
 
