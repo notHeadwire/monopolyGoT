@@ -160,6 +160,7 @@ buyButton.onclick = function () {
         refreshMoneyDisplay();
         buyOnlyOnce++;
         hideBuy();
+        document.getElementById("isSold" + curPlayerPos).style.visibility = "visible";
     }
 
 };
